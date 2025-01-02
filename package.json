@@ -1,0 +1,41 @@
+{
+  "name": "signalk-checklists",
+  "version": "1.0.0",
+  "description": "Boat checklists for signalk",
+  "keywords": [
+    "signalk-embeddable-webapp",
+    "signalk-category-checklists"
+  ],
+  "signalk-plugin-enabled-by-default": false,
+  "signalk": {
+    "appIcon": "./assets/icons/icons-72x72.png",
+    "displayName": "Boat checklists"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier-standard 'src/*.js'",
+    "build-webapp": "webpack --mode=production",
+    "build": "tsc",
+    "prepare": "tsc"
+  },
+  "author": "Kent Ibbetson",
+  "license": "ISC",
+  "dependencies": {
+    "@signalk/github-create-release": "^1.2.1",
+    "@signalk/server-api": "^2.6.0",
+    "@types/react": "^19.0.2",
+    "html-webpack-plugin": "^5.6.3",
+    "react": "^19.0.0",
+    "signalk-checklists": "file:",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "util": "^0.12.5",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.3"
+  }
+}
