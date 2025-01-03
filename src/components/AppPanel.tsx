@@ -7,5 +7,7 @@ const AppPanel = (props: any) => {
   ) {
     return <props.adminUI.Login />;
   }
+
+  return <div>test</div>;
 };
 export default AppPanel;
