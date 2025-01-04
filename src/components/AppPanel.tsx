@@ -1,6 +1,6 @@
 import React from "react";
 
-const AppPanel = (props: any) => {
+const AppPanel = async (props: any) => {
   if (
     props.loginStatus.status == "notLoggedIn" &&
     props.loginStatus.authenticationRequired
@@ -8,13 +8,13 @@ const AppPanel = (props: any) => {
     return <props.adminUI.Login />;
   }
 
-  fetch(
+  const data = await fetch(
     "/signalk/v1/applicationData/global/signalk_checklists/1.0.0/checklists"
   )
     .then((response) => response.json)
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
 
-  return <div>testing</div>;
+  return `<div>testing ${data}</div>`;
 };
 export default AppPanel;
