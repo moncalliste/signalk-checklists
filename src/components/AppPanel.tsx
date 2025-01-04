@@ -8,6 +8,6 @@ const AppPanel = (props: any) => {
     return <props.adminUI.Login />;
   }
 
-  return <div>test</div>;
+  return <div>testing</div>;
 };
 export default AppPanel;
