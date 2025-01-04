@@ -8,13 +8,13 @@ const AppPanel = async (props: any) => {
     return <props.adminUI.Login />;
   }
 
-  const data = await fetch(
+  fetch(
     "/signalk/v1/applicationData/global/signalk_checklists/1.0.0/checklists"
   )
     .then((response) => response.json)
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
+    .then((data) => console.log(data.toString()))
+    .catch((error) => console.debug(error));
 
-  return `<div>testing ${data}</div>`;
+  return `<div>testing</div>`;
 };
 export default AppPanel;
