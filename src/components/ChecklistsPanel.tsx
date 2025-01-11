@@ -8,5 +8,5 @@ export default function ChecklistPanel({
   props: any;
   checklists: [Checklist];
 }) {
-  return `<div>Checklists ${checklists}</div>`;
+  return <div>Checklists {JSON.stringify(checklists)}</div>;
 }
