@@ -1,9 +1,9 @@
-export interface Item {
+export type Item = {
   title: string;
   desc: string;
   done: boolean;
-}
+};
 
-export interface Checklist {
+export type Checklist = {
   items: [Item];
-}
+};
