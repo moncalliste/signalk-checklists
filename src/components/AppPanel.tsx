@@ -43,8 +43,9 @@ const AppPanel = (props: any) => {
     <BrowserRouter>
       <Routes>
         <Route
+          index
           path="/"
-          element={<ChecklistPanel props checklists={c}></ChecklistPanel>}
+          element={<ChecklistPanel props checklists={c} />}
         />
       </Routes>
       {/* <ChecklistPanel props checklists={c}></ChecklistPanel>; */}
