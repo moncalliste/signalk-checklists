@@ -5,5 +5,9 @@ export type Item = {
 };
 
 export type Checklist = {
-  items: [Item];
+  title: string;
+  desc: string;
+  items: [Item] | undefined;
 };
+
+export type Checklists = [Checklist];

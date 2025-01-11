@@ -1,6 +1,6 @@
 import React from "react";
 import ChecklistPanel from "./ChecklistsPanel";
-import { Checklist, Item } from "./Checklists";
+import { Checklist, Checklists, Item } from "./Checklists";
 
 const AppPanel = (props: any) => {
   if (
@@ -24,10 +24,20 @@ const AppPanel = (props: any) => {
     desc: "This is item 1",
     done: false,
   };
-  const c: Checklist = {
-    items: [i],
-  };
 
-  return <ChecklistPanel props checklists={[c]}></ChecklistPanel>;
+  const c: Checklist[] = [
+    {
+      title: "End of season",
+      desc: "Items to prepare the vessel for the end of the sailing season",
+      items: undefined,
+    },
+    {
+      title: "Start of season",
+      desc: "Items to prepare the vessel for the start of the sailing season",
+      items: undefined,
+    },
+  ];
+
+  return <ChecklistPanel props checklists={c}></ChecklistPanel>;
 };
 export default AppPanel;

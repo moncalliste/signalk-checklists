@@ -8,15 +8,16 @@ export default function ChecklistPanel({
   checklists,
 }: {
   props: any;
-  checklists: [Checklist];
+  checklists: Checklist[];
 }) {
   return (
-    <ChecklistCard
-      props={undefined}
-      checklist={{
-        items: [{ title: "test", desc: "test", done: false }],
-      }}
-    />
+    <div className="container text-center">
+      <div className="row">
+        {checklists.map((item) => {
+          return <ChecklistCard props checklist={item} />;
+        })}
+      </div>
+    </div>
   );
   //   return <div>Checklists {JSON.stringify(checklists)}</div>;
 }
