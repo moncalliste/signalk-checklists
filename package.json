@@ -27,6 +27,7 @@
     "@types/react": "^19.0.2",
     "html-webpack-plugin": "^5.6.3",
     "react": "^19.0.0",
+    "react-router-dom": "^7.1.1",
     "signalk-checklists": "file:",
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",

@@ -1,6 +1,7 @@
 import React from "react";
 import ChecklistPanel from "./ChecklistsPanel";
 import { Checklist, Checklists, Item } from "./Checklists";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const AppPanel = (props: any) => {
   if (
@@ -38,6 +39,16 @@ const AppPanel = (props: any) => {
     },
   ];
 
-  return <ChecklistPanel props checklists={c}></ChecklistPanel>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<ChecklistPanel props checklists={c}></ChecklistPanel>}
+        />
+      </Routes>
+      {/* <ChecklistPanel props checklists={c}></ChecklistPanel>; */}
+    </BrowserRouter>
+  );
 };
 export default AppPanel;
