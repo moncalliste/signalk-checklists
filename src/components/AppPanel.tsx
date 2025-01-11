@@ -1,5 +1,6 @@
 import React from "react";
 import ChecklistPanel from "./ChecklistsPanel";
+import { Checklist, Item } from "./Checklists";
 
 const AppPanel = (props: any) => {
   if (
@@ -18,6 +19,15 @@ const AppPanel = (props: any) => {
 
   // return `<div>testing ${data}</div>`;
 
-  return <ChecklistPanel props></ChecklistPanel>;
+  const i: Item = {
+    title: "Item 1",
+    desc: "This is item 1",
+    done: false,
+  };
+  const c: Checklist = {
+    items: [i],
+  };
+
+  return <ChecklistPanel props checklists={[c]}></ChecklistPanel>;
 };
 export default AppPanel;
